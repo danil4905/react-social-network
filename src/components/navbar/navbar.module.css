@@ -1,0 +1,19 @@
+.wrapper {
+    grid-area: n;
+    background-color: green;
+    margin-top: 10px;
+    padding:15px 0px 15px 15px;
+    height: 300px;
+}
+.item {
+    font-size: 20px;
+    text-decoration: none;
+    color: floralwhite;
+}
+.item:hover {
+    color: gainsboro;
+    text-decoration: dashed;
+}
+a.active {
+ color: cornflowerblue;
+}

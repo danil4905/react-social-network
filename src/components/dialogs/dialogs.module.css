@@ -1,0 +1,26 @@
+.wrapper {
+    padding: 15px;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+}
+.dialogsItems {
+    font-size: 18px;
+    border-right: solid white 1px;
+}
+.dialog a{
+    line-height: 34px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.dialog:hover {
+        text-decoration: underline;
+}
+
+.messages {
+ padding: 15px;
+}
+.message {
+ line-height: 24px;
+}

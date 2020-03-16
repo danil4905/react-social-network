@@ -1,0 +1,8 @@
+.wrapper {
+    background-color: green;
+    display: flex;
+    grid-area: h;
+}
+.logo {
+    padding: 15px;
+}

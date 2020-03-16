@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:rgb(157, 255, 239);
+}
+
+.App-wrapper {
+  margin: 0 auto;
+  display: grid;
+  width: 1200px;
+  grid-template-areas: 
+  "n c";
+  grid-template-columns: 2fr 10fr;
+}
+.app-wrapper-content {
+  grid-area: c;
+  background-color: cornflowerblue;
+  margin-top: 10px;
+}

@@ -1,0 +1,12 @@
+.wrapper {
+    grid-area: n;
+    margin-top: 10px;
+}
+.Areal {
+    border: 1px solid #888;
+    width: 400px;
+    height: 80px;
+    outline: none;
+    border-radius: 2px;
+    resize: none;
+}
