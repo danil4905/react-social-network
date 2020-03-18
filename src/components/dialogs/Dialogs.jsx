@@ -31,18 +31,24 @@ const Dialogs = (props) => {
   }
     return (
       <div className={classes.wrapper}>
-        <div className={classes.dialogsItems}>{dialogsElements}</div>
+        <div className={classes.dialogsItems}>
+          <h3>Dialogs</h3>
+          {dialogsElements}
+          </div>
         <div className={classes.messages}>
-          <div className={classes.recentMessages}>{messagesElements}</div>
+          <div className={classes.recentMessages}>
+            <h4>Messages</h4>
+            {messagesElements}
+            </div>
           <div className={classes.newMessage}>
             <textarea
               ref={newMessageElement}
               name="newMessage"
               cols="30"
-              rows="4"
+              rows="3"
               className={classes.newMessage}
               placeholder="Write a message..."
-            ></textarea>
+            autoFocus></textarea>
             <br></br>
             <button onClick={newMessage}>Send</button>
           </div>

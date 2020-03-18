@@ -1,17 +1,17 @@
 .wrapper {
     padding: 15px;
-    color: whitesmoke;
+    color: #888;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: grid;
     grid-template-columns: 3fr 10fr;
 }
 .dialogsItems {
     font-size: 18px;
-    border-right: solid white 1px;
+    border-right: solid #888 1px;
 }
 .dialog a{
     line-height: 34px;
-    color: whitesmoke;
+    color:#888;
     text-decoration: none;
 }
 .dialog:hover {
@@ -23,4 +23,8 @@
 }
 .message {
  line-height: 24px;
+}
+.newMessage {
+    resize: none;
+    outline: none;
 }

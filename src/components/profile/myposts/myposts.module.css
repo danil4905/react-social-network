@@ -10,3 +10,10 @@
     border-radius: 2px;
     resize: none;
 }
+.btn {
+    width: 80px;
+    height: 30px;
+    background-color: #888;
+    border: white;
+    border-radius: 2px;
+}

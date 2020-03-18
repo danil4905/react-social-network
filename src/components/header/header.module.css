@@ -1,8 +1,15 @@
 .wrapper {
-    background-color: green;
+    background-color: #2BA2A2;
     display: flex;
     grid-area: h;
+    border-radius: 2px;
 }
 .logo {
     padding: 15px;
+}
+.name {
+padding: 15px;
+color: floralwhite;
+font-style: italic;
+font-size: 23px;
 }

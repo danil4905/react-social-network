@@ -3,4 +3,8 @@
 }
 .wrapper {
     padding: 10px;
+    background-color: rgb(179, 255, 249);
+    margin: 10px;
+    width: 400px;
+    border-radius: 3px;
 }
