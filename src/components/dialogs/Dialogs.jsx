@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './dialogs.module.css';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const DialogsItem = props => {
   let path = "/dialogs/" + props.id;
@@ -29,31 +29,31 @@ const Dialogs = (props) => {
     let text = newMessageElement.current.value;
     alert(text);
   }
-    return (
-      <div className={classes.wrapper}>
-        <div className={classes.dialogsItems}>
-          <h3>Dialogs</h3>
-          {dialogsElements}
-          </div>
-        <div className={classes.messages}>
-          <div className={classes.recentMessages}>
-            <h4>Messages</h4>
-            {messagesElements}
-            </div>
-          <div className={classes.newMessage}>
-            <textarea
-              ref={newMessageElement}
-              name="newMessage"
-              cols="30"
-              rows="3"
-              className={classes.newMessage}
-              placeholder="Write a message..."
+  return (
+    <div className={classes.wrapper}>
+      <div className={classes.dialogsItems}>
+        <h3>Dialogs</h3>
+        {dialogsElements}
+      </div>
+      <div className={classes.messages}>
+        <div className={classes.recentMessages}>
+          <h4>Messages</h4>
+          {messagesElements}
+        </div>
+        <div className={classes.newMessage}>
+          <textarea
+            ref={newMessageElement}
+            name="newMessage"
+            cols="30"
+            rows="3"
+            className={classes.newMessage}
+            placeholder="Write a message..."
             autoFocus></textarea>
-            <br></br>
-            <button onClick={newMessage}>Send</button>
-          </div>
+          <br></br>
+          <button onClick={newMessage}>Send</button>
         </div>
       </div>
-    );
+    </div>
+  );
 }
 export default Dialogs;

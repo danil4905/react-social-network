@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.logo}>
-                <img src="#" alt="#"/>
+                <img src="#" alt="#" />
             </div>
             <div className={classes.name}>
                 Social network

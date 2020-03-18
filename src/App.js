@@ -1,15 +1,12 @@
-import React from 'react';
-import './App.css';
-import Header from './components/header/header';
-import Navbar from './components/navbar/navbar';
-import Profile from './components/profile/profile';
-import Dialogs from './components/dialogs/Dialogs';
+import React from "react";
+import "./App.css";
+import Header from "./components/header/header";
+import Navbar from "./components/navbar/navbar";
+import Profile from "./components/profile/profile";
+import Dialogs from "./components/dialogs/Dialogs";
 import { BrowserRouter, Route } from "react-router-dom";
 
-
-
 function App(props) {
-  
   return (
     <BrowserRouter>
       <Header />
@@ -29,8 +26,8 @@ function App(props) {
             path="/profile"
             render={() => (
               <Profile
-                posts = {props.state.profilePage.posts}
-                dispatch = {props.dispatch}
+                posts={props.state.profilePage.posts}
+                dispatch={props.dispatch}
               />
             )}
           />
