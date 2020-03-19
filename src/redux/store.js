@@ -1,5 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+import {profileReducer} from "./profile-reducer";
+import {dialogsReducer} from "./dialogs-reducer";
+import {sidebarReducer} from "./sidebar-reducer";
 
 let store = {
   _state: {
@@ -8,7 +9,7 @@ let store = {
         { id: 1, message: "Hello buddy!", likesCounts: 12 },
         { id: 2, message: "What is your name?", likesCounts: 12 }
       ],
-      newPostText: "Hello"
+      newPostText: ""
     },
     messagesPage: {
       dialogs: [
@@ -24,8 +25,10 @@ let store = {
         { id: 2, message: "Hello my friend" },
         { id: 3, message: "How are you?" },
         { id: 4, message: "I am Ok" }
-      ]
-    }
+      ],
+      newMessageBody: ''
+    },
+    sidebarPage: {}
   },
   _callSubscriber() {
     console.log("State changed");
@@ -39,32 +42,12 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-POST") {
-      let newPost = {
-        id: 3,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0
-      };
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._callSubscriber(store);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
-  }
-};
-export const addPostActionCreator = () => {
-  return {
-    type: ADD_POST
-  };
-};
-export const updateNewPostTextActionCreator = text => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newText: text
-  };
-};
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.messagesPage = dialogsReducer(this._state.messagesPage, action);
+    this._state.sidebarPage = sidebarReducer(this._state.sidebarPage, action);
+    this._callSubscriber(this._state);
+}};
+
 export default store;
 window.store = store;
-// file with Data
+// file with Data (BLL)
