@@ -3,17 +3,25 @@
     margin-top: 10px;
 }
 .Areal {
-    border: 1px solid #888;
+    border: 1px solid rgb(61, 216, 182);
     width: 400px;
     height: 80px;
     outline: none;
-    border-radius: 2px;
+    border-radius: 5px;
     resize: none;
 }
 .btn {
-    width: 80px;
+    background-color: #fff;
+    width: 90px;
     height: 30px;
-    background-color: #888;
-    border: white;
-    border-radius: 2px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.2s;
+    outline:none;
+}
+.btn:hover {
+        background-color: rgb(61, 216, 182);
+
 }

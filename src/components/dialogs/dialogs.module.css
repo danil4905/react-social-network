@@ -13,9 +13,10 @@
     line-height: 34px;
     color:#888;
     text-decoration: none;
+    transition:0.2s linear;
 }
-.dialog:hover {
-        text-decoration: underline;
+.dialog a:hover {
+        color: #030a09;
 }
 
 .messages {
@@ -24,7 +25,27 @@
 .message {
  line-height: 24px;
 }
-.newMessage {
+.newMessage  textarea{
     resize: none;
     outline: none;
+    height: 40px;
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(61, 216, 182);
+    border-radius: 5px;
+}
+.btn {
+    background-color: #fff;
+    width: 90px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.2s;
+    outline:none;
+}
+.btn:hover {
+    background-color: rgb(61, 216, 182);
 }

@@ -10,11 +10,14 @@
     font-size: 20px;
     text-decoration: none;
     color: floralwhite;
+    margin-bottom: 10px;
+    transition: 0.2s;
 }
 .item:hover {
-    color: gainsboro;
+    color: rgb(20, 20, 20);
     text-decoration: dashed;
 }
 a.active {
  color: rgba(220, 220, 220, 0.705);
+ text-decoration: underline;
 }

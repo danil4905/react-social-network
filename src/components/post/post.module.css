@@ -1,5 +1,8 @@
 .wrapper img {
     border-radius: 50%;
+    background-color:rgb(61, 216, 182);
+    width: 30px;
+    height: 30px;
 }
 .wrapper {
     padding: 10px;
