@@ -9,15 +9,15 @@ let mapStateToProps = (state) => {
   }
 };
 let mapDispatchToProps = (dispatch) => {
-    return {
-      onSendMessageClick: () => {
-         dispatch(sendMessageCreator());
-        },
-      updateNewMessageBody: (body) => {
-        dispatch(updateNewMessageBodyCreator(body));
-      }
+  return {
+    onSendMessageClick: () => {
+      dispatch(sendMessageCreator());
+    },
+    updateNewMessageBody: (body) => {
+      dispatch(updateNewMessageBodyCreator(body));
     }
-}; 
+  }
+};
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default DialogsContainer;
