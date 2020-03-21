@@ -10,14 +10,14 @@ let mapStateToProps = (state) => {
 };
 let mapDispatchToProps = (dispatch) => {
     return {
-      updateNewMessageBody: () => {
+      onSendMessageClick: () => {
          dispatch(sendMessageCreator());
         },
-      onSendMessageClick: (body) => {
+      updateNewMessageBody: (body) => {
         dispatch(updateNewMessageBodyCreator(body));
       }
     }
-};
+}; 
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default DialogsContainer;

@@ -18,8 +18,4 @@ export let rerenderEntireTree = state => {
 };
 rerenderEntireTree(store.getState());
 
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
 // rerendering DOM when use this function
