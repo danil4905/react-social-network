@@ -26,9 +26,55 @@ let store = {
         { id: 3, message: "How are you?" },
         { id: 4, message: "I am Ok" }
       ],
-      newMessageBody: ''
+      newMessageBody: ""
     },
-    sidebarPage: {}
+    sidebarPage: {},
+    usersPage: {
+      users: [
+        {
+          id: 1,
+          fullName: "Natalya",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: true
+        },
+        {
+          id: 2,
+          fullName: "Armen",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: false
+        },
+        {
+          id: 3,
+          fullName: "Denis",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: true
+        },
+        {
+          id: 4,
+          fullName: "David",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: false
+        },
+        {
+          id: 5,
+          fullName: "Rudick",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: true
+        },
+        {
+          id: 6,
+          fullName: "Maxim",
+          status: "I am boss",
+          location: { country: "Russia", city: "Izhevsk" },
+          followed: true
+        }
+      ]
+    }
   },
   _callSubscriber() {
     console.log("State changed");
@@ -46,7 +92,8 @@ let store = {
     this._state.messagesPage = dialogsReducer(this._state.messagesPage, action);
     this._state.sidebarPage = sidebarReducer(this._state.sidebarPage, action);
     this._callSubscriber(this._state);
-}};
+  }
+};
 
 export default store;
 window.store = store;

@@ -33,12 +33,14 @@ const Navbar = () => {
             </NavLink>
         </div>
         <div className={classes.item}>
-          <NavLink to="/music" className={classes.item}>
-            Music
+          <NavLink to="/users" className={classes.item} activeClassName={classes.active}
+          >
+            New Users
             </NavLink>
         </div>
         <div className={classes.item}>
-          <NavLink to="/settings" className={classes.item}>
+          <NavLink to="/settings" className={classes.item} activeClassName={classes.active}
+          >
             Settings
             </NavLink>
         </div>
