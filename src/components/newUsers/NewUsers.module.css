@@ -1,0 +1,49 @@
+.btn_follow,.btn_unfollow {
+    background-color: #fff;
+    width: 70px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.2s;
+    outline: none;
+}
+
+.btn_follow:hover {
+    background-color: rgb(61, 216, 182);
+
+}
+.btn_unfollow:hover {
+    background-color: rgb(216, 92, 61);
+}
+.page_wrapper  {
+    padding: 15px;
+    display: grid;
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-gap: 2vw;
+
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.user_item {
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    align-items:center;
+    justify-content:start;
+}
+.left {
+    margin-right: 50px;
+}
+.title {
+    margin: 10px;
+}
