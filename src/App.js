@@ -7,7 +7,6 @@ import DialogsContainer from "./components/dialogs/DialogsContainer";
 import { BrowserRouter, Route } from "react-router-dom";
 import NewUsersContainer from "./components/newUsers/NewUsersContainer";
 function App(props) {
-  debugger;
   return (
     <BrowserRouter>
       <Header />

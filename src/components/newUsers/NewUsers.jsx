@@ -4,14 +4,11 @@ import avatar from '../../avatar.png';
 import classes from './NewUsers.module.css';
 
 class NewUsers extends React.Component {
-    constructor(props) {
-        super(props);
-        alert('New');
-        if (this.props.users.length === 0) {
-            Axios.get("https://social-network.samuraijs.com/api/1.0/users").then(Response => {
-                this.props.setUsers(Response.data.items);
-            })
-        }
+
+    componentDidMount(props) {
+        Axios.get("https://social-network.samuraijs.com/api/1.0/users").then(Response => {
+            this.props.setUsers(Response.data.items);
+        })
     }
     render() {
         return (

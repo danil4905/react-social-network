@@ -21,6 +21,5 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 }
-debugger;
 const NewUsersContainer = connect(mapStateToProps, mapDispatchToProps)(NewUsers);
 export default NewUsersContainer;
