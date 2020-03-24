@@ -31,48 +31,6 @@ let store = {
     sidebarPage: {},
     usersPage: {
       users: [
-        {
-          id: 1,
-          fullName: "Natalya",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: true
-        },
-        {
-          id: 2,
-          fullName: "Armen",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: false
-        },
-        {
-          id: 3,
-          fullName: "Denis",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: true
-        },
-        {
-          id: 4,
-          fullName: "David",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: false
-        },
-        {
-          id: 5,
-          fullName: "Rudick",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: true
-        },
-        {
-          id: 6,
-          fullName: "Maxim",
-          status: "I am boss",
-          location: { country: "Russia", city: "Izhevsk" },
-          followed: true
-        }
       ]
     }
   },

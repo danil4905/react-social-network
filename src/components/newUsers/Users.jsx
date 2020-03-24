@@ -9,8 +9,8 @@ const Users = (props) => {
         pages.push(i);
     }
     return (
+        
         <div classes={classes.users_all}> <h3 className={classes.title}> New Users</h3>
-
             <div className={classes.page_wrapper}>
                 {
                     props.users.map(user =>
