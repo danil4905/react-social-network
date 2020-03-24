@@ -10,4 +10,10 @@
     margin: 10px;
     width: 400px;
     border-radius: 3px;
+    transition: 0.2s;
+}
+.wrapper:hover {
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
 }

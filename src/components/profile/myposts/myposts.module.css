@@ -10,7 +10,7 @@
     border-radius: 5px;
     resize: none;
 }
-.btn_follow,.btn_unfollow {
+.btn {
     background-color: #fff;
     width: 90px;
     height: 30px;
@@ -23,5 +23,5 @@
 }
 .btn:hover {
         background-color: rgb(61, 216, 182);
-
+    cursor: pointer;
 }
