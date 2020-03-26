@@ -1,6 +1,7 @@
 import React from 'react';
 import avatar from '../../avatar.png';
 import classes from './NewUsers.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Users = (props) => {
     let pageCount = Math.ceil(props.totalCount / props.pageSize);
@@ -9,14 +10,16 @@ const Users = (props) => {
         pages.push(i);
     }
     return (
-        
+
         <div classes={classes.users_all}> <h3 className={classes.title}> New Users</h3>
             <div className={classes.page_wrapper}>
                 {
                     props.users.map(user =>
                         <div key={user.id} className={classes.user_item}>
                             <div className={classes.left}>
-                                <img src={user.photos.small != null ? user.photos.small : avatar} className={classes.avatar} alt="#" />
+                                <NavLink to={'/profile/' + user.id}>
+                                    <img src={user.photos.small != null ? user.photos.small : avatar} className={classes.avatar} alt="#" />
+                                </NavLink>
                                 <div className={classes.btn_wrapper}>
                                     {user.followed ? <button className={classes.btn_unfollow} onClick={() => { props.unfollow(user.id) }}>Unfolow</button>
                                         : <button className={classes.btn_follow} onClick={() => { props.follow(user.id) }}>Follow</button>}

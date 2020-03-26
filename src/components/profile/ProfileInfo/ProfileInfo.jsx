@@ -1,11 +1,17 @@
 import React from "react";
-import photo from '../../../photo.jpg'
+import avatar from '../../../avatar.png';
+import Preloader from "../../common/Preloader/Preloader";
 
 const ProfileInfo = (props) => {
+ if (!props.profile) {
+   return <Preloader />
+ }
+  debugger;
+
     return (
       <div class='profileInfo'>
-        <img src={photo} alt="#"  class='profileInfo-Img'/>
-        Hello Everyone!
+        <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} class='profileInfo-Img' alt="#" />
+       {props.profile.fullName}
       </div>
     );
 }
