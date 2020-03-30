@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/header/header";
 import Navbar from "./components/navbar/navbar";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
 import { BrowserRouter, Route } from "react-router-dom";
 import NewUsersContainer from "./components/newUsers/NewUsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
+import HeaderContainer from "./components/header/HeaderContainer";
 function App(props) {
   return (
     <BrowserRouter>
-      <Header />
+      <HeaderContainer />
       <div className="App-wrapper">
         <Navbar />
         <div className="app-wrapper-content">
