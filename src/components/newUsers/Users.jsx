@@ -25,34 +25,41 @@ const Users = (props) => {
                                 <div className={classes.btn_wrapper}>
                                     {user.followed ?
                                         <button className={classes.btn_unfollow}
+                                            disabled={props.followingInProgress.some(id => id === user.id)}
                                             onClick={() => {
+                                                props.togleFollowingProgress(true, user.id);
                                                 Axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
                                                     {
                                                         withCredentials: true,
                                                         headers: {
-                                                            "API-KEY": "fff53b1a-f2ec-4f45-93d4-6e4860d76469"
+                                                            "API-KEY": "108fc3e2-3513-4a0f-bd09-dc2d0da947cc"
                                                         }
                                                     })
                                                     .then(Response => {
                                                         if (Response.data.resultCode === 0) {
                                                             props.unfollow(user.id);
                                                         }
+                                                        props.togleFollowingProgress(false, user.id);
                                                     })
                                             }}>Unfolow</button>
 
                                         : <button className={classes.btn_follow}
+                                            disabled={props.followingInProgress.some(id => id === user.id)}
                                             onClick={() => {
+                                                props.togleFollowingProgress(true, user.id);
+
                                                 Axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {},
                                                     {
                                                         withCredentials: true,
                                                         headers: {
-                                                            "API-KEY": "fff53b1a-f2ec-4f45-93d4-6e4860d76469"
+                                                            "API-KEY": "108fc3e2-3513-4a0f-bd09-dc2d0da947cc"
                                                         }
                                                     })
-                                                    .then(Response => {
-                                                        if (Response.data.resultCode === 0) {
+                                                    .then(data => {
+                                                        if (data.resultCode === 0) {
                                                             props.follow(user.id);
                                                         }
+                                                        props.togleFollowingProgress(false, user.id);
                                                     })
                                             }}>Follow</button>}
                                 </div>
