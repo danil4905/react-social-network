@@ -15,15 +15,10 @@ export const usersAPI = {
         return Response.data;
       });
   },
-
-  following(userId = 2) {
-    return instance.post(`follow/${userId}`).then(Response => {
-      return Response.data;
-    });
+  follow(userId) {
+    return instance.post(`follow/${userId}`)
   },
-  unfollowing(userId = 2) {
-    return instance.delete(`follow/${userId}`).then(Response => {
-      return Response.data;
-    });
+  unfollow(userId) {
+    return instance.delete(`follow/${userId}`)
   }
 };
