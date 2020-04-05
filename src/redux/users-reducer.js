@@ -13,7 +13,7 @@ let initialState = {
   totalCount: 0,
   currentPage: 1,
   isFetching: true, // Для ожидание ответа от сервера
-  followingInProgress: [] // Помещается айди пользователей потом оставляется только то которое нужно задизейблить
+  followingInProgress: [], // Помещается айди пользователей потом оставляется только то которое нужно задизейблить
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -21,93 +21,93 @@ const usersReducer = (state = initialState, action) => {
     case FOLLOW:
       return {
         ...state,
-        users: state.users.map(u => {
+        users: state.users.map((u) => {
           if (u.id === action.userId) {
             return { ...u, followed: true };
           }
           return u;
-        })
+        }),
       };
     case UNFOLLOW:
       return {
         ...state,
-        users: state.users.map(u => {
+        users: state.users.map((u) => {
           if (u.id === action.userId) {
             return { ...u, followed: false };
           }
           return u;
-        })
+        }),
       };
     case SET_USERS:
       return {
         ...state,
-        users: [...action.users]
+        users: [...action.users],
       };
     case SET_CURRENT_PAGE:
       return {
         ...state,
-        currentPage: action.currentPage
+        currentPage: action.currentPage,
       };
     case SET_USERS_TOTAL_COUNT:
       return {
         ...state,
-        totalCount: action.totalCount
+        totalCount: action.totalCount,
       };
     case TOGLE_IS_FETCHING:
       return {
         ...state,
-        isFetching: action.isFetching
+        isFetching: action.isFetching,
       };
     case TOGLE_IS_FOLLOWING_PROGRESS:
       return {
         ...state,
         followingInProgress: action.isFetching
           ? [...state.followingInProgress, action.id]
-          : state.followingInProgress.filter(id => id !== action.id)
+          : state.followingInProgress.filter((id) => id !== action.id),
       };
     default:
       return state;
   }
 };
 // ActionCreators
-export const followSuccess = userId => ({ type: FOLLOW, userId });
-export const unfollowSuccess = userId => ({
+export const followSuccess = (userId) => ({ type: FOLLOW, userId });
+export const unfollowSuccess = (userId) => ({
   type: UNFOLLOW,
-  userId
+  userId,
 });
-export const setUsers = users => ({ type: SET_USERS, users });
-export const setCurrentPage = currentPage => ({
+export const setUsers = (users) => ({ type: SET_USERS, users });
+export const setCurrentPage = (currentPage) => ({
   type: SET_CURRENT_PAGE,
-  currentPage
+  currentPage,
 });
-export const setUsersTotalCount = totalCount => ({
+export const setUsersTotalCount = (totalCount) => ({
   type: SET_USERS_TOTAL_COUNT,
-  totalCount
+  totalCount,
 });
-export const togleIsFetching = isFetching => ({
+export const togleIsFetching = (isFetching) => ({
   type: TOGLE_IS_FETCHING,
-  isFetching
+  isFetching,
 });
 export const togleFollowingProgress = (isFetching, userId) => ({
   type: TOGLE_IS_FOLLOWING_PROGRESS,
   isFetching,
-  userId
+  userId,
 });
 export const getUsersThunk = (currentPage, pageSize) => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(togleIsFetching(true));
     dispatch(setCurrentPage(currentPage));
-    usersAPI.getUsers(currentPage, pageSize).then(data => {
+    usersAPI.getUsers(currentPage, pageSize).then((data) => {
       dispatch(setUsersTotalCount(Math.ceil(data.totalCount / 10)));
       dispatch(setUsers(data.items));
       dispatch(togleIsFetching(false));
     });
   };
 };
-export const follow = userId => {
-  return dispatch => {
+export const follow = (userId) => {
+  return (dispatch) => {
     dispatch(togleFollowingProgress(true, userId));
-    usersAPI.follow(userId).then(response => {
+    usersAPI.follow(userId).then((response) => {
       if (response.data.resultCode === 0) {
         dispatch(followSuccess(userId));
       }
@@ -115,10 +115,10 @@ export const follow = userId => {
     });
   };
 };
-export const unfollow = userId => {
-  return dispatch => {
+export const unfollow = (userId) => {
+  return (dispatch) => {
     dispatch(togleFollowingProgress(true, userId));
-    usersAPI.unfollow(userId).then(response => {
+    usersAPI.unfollow(userId).then((response) => {
       if (response.data.resultCode === 0) {
         dispatch(unfollowSuccess(userId));
       }

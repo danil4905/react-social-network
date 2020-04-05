@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './dialogs.module.css';
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 
 let DialogsItem = props => {
   let path = "/dialogs/" + props.id;
@@ -16,11 +16,10 @@ let Message = props => {
 
 
 const Dialogs = (props) => {
-  debugger;
   let state = props.dialogsPage;
 
   let dialogsElements = state.dialogs.map(d => (
-    <DialogsItem id={d.id} key ={d.id} name={d.name}  />
+    <DialogsItem id={d.id} key={d.id} name={d.name} />
   ));
   let newMessageBody = state.newMessageBody;
   let messagesElements = state.messages.map(m => <Message message={m.message} key={m.id} />);
@@ -31,6 +30,7 @@ const Dialogs = (props) => {
     let body = e.target.value;
     props.updateNewMessageBody(body);
   };
+  if (props.isAuth === false) return <Redirect to={'/login'} />;
   return (
     <div className={classes.wrapper}>
       <div className={classes.dialogsItems}>
@@ -46,7 +46,7 @@ const Dialogs = (props) => {
           <textarea
             value={newMessageBody}
             onChange={onNewMessageChange}
-            
+
             className={classes.newMessage}
             placeholder="Write a message..."
             autoFocus></textarea>

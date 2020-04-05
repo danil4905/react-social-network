@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import NewUsersContainer from "./components/newUsers/NewUsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
+import Login from "./components/login/Login";
 function App(props) {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App(props) {
           <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/profile/:userId" render={() => <ProfileContainer />} />
           <Route path="/users" render={() => <NewUsersContainer />} />
+          <Route path="/login" render={() => <Login />} />
         </div>
       </div>
     </BrowserRouter>
