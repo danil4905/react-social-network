@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { follow, unfollow, setUsers, setCurrentPage, setUsersTotalCount, togleIsFetching, togleFollowingProgress } from '../../redux/users-reducer';
+import { follow, unfollow, setCurrentPage, togleFollowingProgress } from '../../redux/users-reducer';
 import Users from './Users';
+import { withAuthRedirect } from "../../hoc/withAuthRedirectComponent";
 import Preloader from '../common/Preloader/Preloader';
-import { usersAPI } from '../../api/api';
+import { compose } from "redux";
 import { getUsersThunk } from '../../redux/users-reducer';
 class NewUsersContainer extends React.Component {
 
     componentDidMount(props) {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        this.props.getUsersThunk(this.props.currentPage, this.props.pageSize);
     }
     onPageChanged = (pageNumber) => {
         this.props.getUsers(pageNumber, this.props.pageSize);
@@ -39,4 +40,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { follow, unfollow, setUsers, setCurrentPage, setUsersTotalCount, togleIsFetching, togleFollowingProgress, getUsers: getUsersThunk })(NewUsersContainer);
+export default compose(
+    withAuthRedirect,
+    connect(mapStateToProps, { follow, unfollow, setCurrentPage, togleFollowingProgress, getUsersThunk })
+)(NewUsersContainer) 
