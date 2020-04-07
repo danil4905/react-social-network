@@ -33,7 +33,7 @@ const Users = (props) => {
                             </div>
                             <div className={classes.right}>
                                 <div className={classes.user_name}>{user.name}</div>
-                                <div>Status</div>
+                                        <div>{user.status}</div>
                             </div>
                         </div>
                     )

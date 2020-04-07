@@ -6,7 +6,7 @@ const Profile = (props) => {
     debugger;
     return (
         <div className={classes.wrapper}>
-            <ProfileInfo profile={props.profile}/>
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
             <MyPostsContainer />
         </div>
     )

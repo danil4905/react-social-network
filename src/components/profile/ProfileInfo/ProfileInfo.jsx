@@ -12,7 +12,7 @@ const ProfileInfo = (props) => {
       <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} class='profileInfo-Img' alt="#" />
       <div>
         <h3>{props.profile.fullName}</h3>
-        <ProfileStatus status={'hello!'} />
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
       </div>
     </div>
   );
