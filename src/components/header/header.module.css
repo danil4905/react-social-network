@@ -1,6 +1,7 @@
 .wrapper {
     background-color: #2BA2A2;
     display: flex;
+    justify-content: space-between;
     grid-area: h;
     border-radius: 2px;
 }
@@ -12,4 +13,10 @@ padding: 15px;
 color: floralwhite;
 font-style: italic;
 font-size: 23px;
+}
+.left {
+    display: flex;
+}
+.right {
+    padding: 15px;
 }

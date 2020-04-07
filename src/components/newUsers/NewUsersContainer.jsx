@@ -12,7 +12,7 @@ class NewUsersContainer extends React.Component {
         this.props.getUsersThunk(this.props.currentPage, this.props.pageSize);
     }
     onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize);
+        this.props.getUsersThunk(pageNumber, this.props.pageSize);
     }
     render() {
         return <>

@@ -1,6 +1,6 @@
 .wrapper {
-    grid-area: n;
     background-color: #2BA2A2;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
+    text-align: center;
     padding:15px 0px 15px 15px;  
 }

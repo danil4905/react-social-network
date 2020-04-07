@@ -11,7 +11,7 @@ const Header = (props) => {
                 </div>
                 <div className={classes.name}>
                     Social network
-            </div>
+                </div>
             </div>
             <div className={classes.right}>
                 {props.isAuth ? props.login

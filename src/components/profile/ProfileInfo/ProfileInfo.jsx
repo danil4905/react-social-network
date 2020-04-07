@@ -1,18 +1,20 @@
 import React from "react";
 import avatar from '../../../avatar.png';
 import Preloader from "../../common/Preloader/Preloader";
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
- if (!props.profile) {
-   return <Preloader />
- }
-  debugger;
-
-    return (
-      <div class='profileInfo'>
-        <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} class='profileInfo-Img' alt="#" />
-       {props.profile.fullName}
+  if (!props.profile) {
+    return <Preloader />
+  }
+  return (
+    <div class='profileInfo'>
+      <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} class='profileInfo-Img' alt="#" />
+      <div>
+        <h3>{props.profile.fullName}</h3>
+        <ProfileStatus status={'hello!'} />
       </div>
-    );
+    </div>
+  );
 }
 export default ProfileInfo;

@@ -2,7 +2,6 @@ import React from 'react';
 import avatar from '../../avatar.png';
 import classes from './NewUsers.module.css';
 import { NavLink } from 'react-router-dom';
-import * as Axios from "axios";
 
 const Users = (props) => {
     let pageCount = Math.ceil(props.totalCount / props.pageSize);
@@ -10,7 +9,6 @@ const Users = (props) => {
     for (let i = 1; i <= pageCount; i++) {
         pages.push(i);
     }
-    debugger;
     return (
 
         <div classes={classes.users_all}> <h3 className={classes.title}> New Users</h3>
