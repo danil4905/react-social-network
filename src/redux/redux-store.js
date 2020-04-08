@@ -12,7 +12,7 @@ let reducers = combineReducers({
   sidebarPage: sidebarReducer,
   usersPage: usersReducer,
   auth: authReducer,
-  form: formReducer
+  form: formReducer,
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleWare)); // создаем стор
