@@ -15,6 +15,6 @@ let reducers = combineReducers({
   form: formReducer,
 });
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleWare)); // создаем стор
+let store = createStore(reducers, applyMiddleware(thunkMiddleWare)); // creating the Redux Store
 window.store = store;
 export default store;

@@ -2,14 +2,7 @@
     grid-area: n;
     margin-top: 10px;
 }
-.Areal {
-    border: 1px solid rgb(61, 216, 182);
-    width: 400px;
-    height: 80px;
-    outline: none;
-    border-radius: 5px;
-    resize: none;
-}
+
 .btn {
     background-color: #fff;
     width: 90px;

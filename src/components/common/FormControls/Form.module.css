@@ -1,0 +1,28 @@
+.formControl.error input,
+.formControl.error textarea {
+    border: solid 2px rgb(231, 59, 59);
+}
+.formControl textarea {
+        border: 1px solid rgb(61, 216, 182);
+        width: 400px;
+        height: 80px;
+        outline: none;
+        border-radius: 5px;
+        resize: none;
+        font-size: 16px;
+}
+.formControl span {
+    color: rgb(231, 59, 59);
+}
+.login_input {
+    width: 20%;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: #2BA2A2 1px solid;
+    margin-bottom: 15px;
+    outline: none;
+}
+.login_input.error {
+    border: solid 2px rgb(231, 59, 59);
+}

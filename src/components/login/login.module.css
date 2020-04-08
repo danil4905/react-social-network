@@ -4,3 +4,23 @@
     text-align: center;
     padding:15px 0px 15px 15px;  
 }
+
+.btn {
+    background-color: #fff;
+    width: 90px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.2s;
+    outline: none;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(61, 216, 182);
+    cursor: pointer;
+}
+
