@@ -1,8 +1,10 @@
 import React from 'react';
 import preloader from "./freloader.svg";
 
-let Preloader = (props) =>{
+let Preloader = (props) => {
     return (
-    <img src={preloader} />)
+        <div class="preloader">
+            <img src={preloader} />
+        </div>)
 }
 export default Preloader;

@@ -34,3 +34,8 @@ body {
 .profileInfo {
       display: flex;
 }
+.preloader {
+  text-align: center;
+  height: 100%;
+  margin-top: 9%;
+}

@@ -19,7 +19,7 @@ const MyPosts = (props) => {
     return (
       <form onSubmit={props.handleSubmit}>
         <Field component={Textarea} name={"newPostText"} validate={[requiredField, maxLength]}
-          className={classes.Areal} placeholder='Start writing...' autoFocus={true} />
+          className={classes.Areal} placeholder='Start writing...' />
         <br />
         <button className={classes.btn}>Add Post</button>
       </form>

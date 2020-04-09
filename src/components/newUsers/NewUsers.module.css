@@ -49,6 +49,10 @@
     -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
+    margin: -5px;
+    height: 105px;
+    width: 255px;
+
 }
 .left {
     margin-right: 50px;

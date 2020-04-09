@@ -11,7 +11,7 @@ const Users = (props) => {
     }
     return (
 
-        <div classes={classes.users_all}> <h3 className={classes.title}> New Users</h3>
+        <div classes={classes.users_all}> 
             <div className={classes.page_wrapper}>
                 {
                     props.users.map(user =>
