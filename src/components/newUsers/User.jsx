@@ -2,9 +2,8 @@ import React from 'react';
 import avatar from '../../avatar.png';
 import classes from './NewUsers.module.css';
 import { NavLink } from 'react-router-dom';
-import Preloader from '../common/Preloader/Preloader';
 
-const User = ({ user, followingInProgress, unfollow, follow, isFetching }) => {
+const User = ({ user, followingInProgress, unfollow, follow }) => {
 
     return (
         <div className={classes.user_item}>
