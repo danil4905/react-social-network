@@ -1,14 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 
-
-//     componentDidUpdate (prevProps,prevState) {
-//         if (prevProps.status !== this.props.status){
-//             this.setState({
-//                 status:this.props.status
-//             });
-//         }
-//     }
 
 const ProfileStatus = (props) => {
     let [editMode, setEditMode] = useState(false);
@@ -24,6 +15,9 @@ const ProfileStatus = (props) => {
     function onStatusChange (e) {
         setStatus(e.currentTarget.value);
     }
+    useEffect(() =>  {
+        setStatus(props.status)
+    },[props.status]);
     return (
             <div>
                 {!editMode &&
