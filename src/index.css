@@ -42,7 +42,7 @@ body {
   text-align: center;
   height: 100%;
   margin-top: 9%;
-  width: 100%;
-  height: 500px;
-  background-color: white;
+}
+.user_preloader {
+  height: 368px;
 }

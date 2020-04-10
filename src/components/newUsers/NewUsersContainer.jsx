@@ -25,16 +25,17 @@ class NewUsersContainer extends React.Component {
     render() {
         return <>
             <h3 style={{ margin: '10px' }} className={'title'}> New Users</h3>
-            {this.props.isFetching ? <Preloader /> :
+        {/* {this.props.isFetching ? <Preloader /> : */}
                 <Users onPageChanged={this.onPageChanged}
                     currentPage={this.props.currentPage}
                     pageSize={this.props.pageSize}
+                    isFetching={this.props.isFetching}
                     totalCount={this.props.totalCount}
                     users={this.props.users}
                     follow={this.props.follow}
                     unfollow={this.props.unfollow}
                     togleFollowingProgress={this.props.togleFollowingProgress}
-                    followingInProgress={this.props.followingInProgress} />}
+                    followingInProgress={this.props.followingInProgress} />
         </>
     }
 }
@@ -50,6 +51,5 @@ let mapStateToProps = (state) => {
 }
 
 export default compose(
-
     connect(mapStateToProps, { follow, unfollow, setCurrentPage, togleFollowingProgress, getUsersThunk })
 )(NewUsersContainer) 
