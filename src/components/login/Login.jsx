@@ -1,29 +1,29 @@
 import React from 'react';
 import classes from './login.module.css'
 import { reduxForm, Field } from 'redux-form';
-import {Input} from '../common/FormControls/FormControls';
+import { Input } from '../common/FormControls/FormControls';
 import { requiredField, MaxLengthCreator } from '../../validators/validators';
 import { connect } from 'react-redux';
-import {login} from '../../redux/auth-reducer';
+import { login } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router-dom';
 
 const maxLengthLogin = MaxLengthCreator(50);
 const maxLengthPassword = MaxLengthCreator(16)
 
-const LoginForm = (props) => {
+const LoginForm = ({ handleSubmit, error }) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div>
-                <Field name='email' type='email' placeholder={'Email'} component={Input} autofocus={true} validate={[requiredField, maxLengthLogin]}/>
+                <Field name='email' type='email' placeholder={'Email'} component={Input} autofocus={true} validate={[requiredField, maxLengthLogin]} />
             </div>
             <div>
-                <Field placeholder='password' type='password' name='password' component={Input} validate={[requiredField, maxLengthPassword]}/>
+                <Field placeholder='password' type='password' name='password' component={Input} validate={[requiredField, maxLengthPassword]} />
             </div>
             <div>
                 <Field type='checkbox' name='rememberMe' component={Input} />Remember me
             </div>
-            {props.error && <div>
-                {props.error}
+            {error && <div>
+                {error}
             </div>
             }
             <div>
@@ -34,11 +34,11 @@ const LoginForm = (props) => {
 }
 const LoginReduxForm = reduxForm({ form: "login" })(LoginForm);
 
-const Login = (props) => {
+const Login = ({ login, isAuth }) => {
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe)
+        login(formData.email, formData.password, formData.rememberMe)
     }
-    if(props.isAuth) return <Redirect to='/profile' />
+    if (isAuth) return <Redirect to='/profile' />
     return (
         <div className={classes.wrapper}>
             <h2 className={classes.title}>Login</h2>
@@ -47,7 +47,7 @@ const Login = (props) => {
     )
 }
 const mapStateToProps = (state) => ({
-    isAuth:state.auth.isAuth
+    isAuth: state.auth.isAuth
 })
 
-export default connect(mapStateToProps,{login})(Login);
+export default connect(mapStateToProps, { login })(Login);

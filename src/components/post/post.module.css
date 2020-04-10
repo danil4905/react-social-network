@@ -1,9 +1,10 @@
 .wrapper img {
     border-radius: 50%;
-    background-color:rgb(61, 216, 182);
+    background-color: rgb(61, 216, 182);
     width: 30px;
     height: 30px;
 }
+
 .wrapper {
     padding: 10px;
     background-color: rgb(179, 255, 249);
@@ -12,6 +13,7 @@
     border-radius: 3px;
     transition: 0.2s;
 }
+
 .wrapper:hover {
     -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.22);

@@ -2,11 +2,11 @@ import React from 'react';
 import classes from './post.module.css'
 import photo from '../../photo.jpg'
 
-const Post = (props) => {
+const Post = ({ message }) => {
     return (
         <div className={classes.wrapper}>
-            <img src={photo} />
-            {props.message}
+            <img src={photo} alt="logo" />
+            {message}
         </div>
     )
 }

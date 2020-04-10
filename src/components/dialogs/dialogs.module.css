@@ -5,27 +5,32 @@
     display: grid;
     grid-template-columns: 3fr 10fr;
 }
+
 .dialogsItems {
     font-size: 18px;
     border-right: solid #888 1px;
 }
-.dialog a{
+
+.dialog a {
     line-height: 34px;
-    color:#888;
+    color: #888;
     text-decoration: none;
-    transition:0.2s linear;
+    transition: 0.2s linear;
 }
+
 .dialog a:hover {
-        color: #030a09;
+    color: #030a09;
 }
 
 .messages {
- padding: 15px;
+    padding: 15px;
 }
+
 .message {
- line-height: 24px;
+    line-height: 24px;
 }
-.newMessage  textarea{
+
+.newMessage textarea {
     resize: none;
     outline: none;
     height: 40px;
@@ -35,6 +40,7 @@
     border: 1px solid rgb(61, 216, 182);
     border-radius: 5px;
 }
+
 .btn {
     background-color: #fff;
     width: 90px;
@@ -44,8 +50,9 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     transition: 0.2s;
-    outline:none;
+    outline: none;
 }
+
 .btn:hover {
     background-color: rgb(61, 216, 182);
 }

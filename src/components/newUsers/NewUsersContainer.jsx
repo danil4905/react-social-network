@@ -13,6 +13,7 @@ import {
     getTotalUsersCount,
     getUsers,
 } from "../../redux/users-selectors";
+
 class NewUsersContainer extends React.Component {
 
     componentDidMount(props) {

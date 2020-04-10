@@ -2,10 +2,11 @@
     grid-area: n;
     background-color: #2BA2A2;
     margin-top: 10px;
-    padding:15px 0px 15px 15px;
+    padding: 15px 0px 15px 15px;
     height: 500px;
     border-radius: 2px;
 }
+
 .item {
     font-size: 20px;
     text-decoration: none;
@@ -13,11 +14,13 @@
     margin-bottom: 10px;
     transition: 0.2s;
 }
+
 .item:hover {
     color: rgb(20, 20, 20);
     text-decoration: dashed;
 }
+
 a.active {
- color: rgba(220, 220, 220, 0.705);
- text-decoration: underline;
+    color: rgba(220, 220, 220, 0.705);
+    text-decoration: underline;
 }
