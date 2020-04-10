@@ -3,8 +3,8 @@ import preloader from "./freloader.svg";
 
 let Preloader = (props) => {
     return (
-        <div class="preloader">
-            <img src={preloader} />
+        <div className="preloader">
+            <img src={preloader}  alt="#"/>
         </div>)
 }
 export default Preloader;

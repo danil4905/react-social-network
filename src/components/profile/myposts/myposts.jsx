@@ -5,7 +5,7 @@ import { reduxForm, Field } from 'redux-form';
 import { requiredField, MaxLengthCreator } from '../../../validators/validators';
 import { Textarea } from '../../common/FormControls/FormControls';
 
-const MyPosts = (props) => {
+const MyPosts = React.memo((props) => {
   let postsElements = props.posts.map(p => (
     <Post message={p.message} id={p.id} key={p.id} likesCounts={p.likesCounts} className={classes.post_item} /> // Component to all posts
   ));
@@ -38,5 +38,5 @@ const MyPosts = (props) => {
       </div>
     </div>
   );
-}
+})
 export default MyPosts;

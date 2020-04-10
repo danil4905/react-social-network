@@ -8,8 +8,8 @@ const ProfileInfo = (props) => {
     return <Preloader />
   }
   return (
-    <div class='profileInfo'>
-      <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} class='profileInfo-Img' alt="#" />
+    <div className='profileInfo'>
+      <img src={props.profile.photos.large != null ? props.profile.photos.large : avatar} className='profileInfo-Img' alt="#" />
       <div>
         <h3>{props.profile.fullName}</h3>
         <ProfileStatus status={props.status} updateStatus={props.updateStatus} />

@@ -16,5 +16,3 @@ export let rerenderEntireTree = state => {
   );
 };
 rerenderEntireTree(store.getState());
-
-// rerendering DOM when use this function
